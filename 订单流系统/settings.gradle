@@ -1,0 +1,51 @@
+pluginsManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+rootProject.name = '订单流系统'
+include ':app'
+
+### 第四步：触发自动编译
+
+1. **上传文件后**
+   - GitHub会自动检测到配置文件
+   - 自动开始编译过程
+   - 可以在"Actions"标签页查看进度
+
+2. **编译过程**
+   - 设置Java 17环境
+   - 下载依赖包
+   - 编译Android项目
+   - 生成APK文件
+   - 上传到Artifacts
+
+### 第五步：下载APK文件
+
+1. **编译完成后**
+   - 进入"Actions"页面
+   - 点击最新的编译任务
+   - 在"Artifacts"部分找到"OrderFlow-APK"
+   - 点击下载
+
+## 🛠️ 我为您准备的完整文件包
+
+### 已修复的配置文件：
+
+#### settings.gradle（修复版）
+```
+include ':app'
+rootProject.name = '订单流系统'
+```
